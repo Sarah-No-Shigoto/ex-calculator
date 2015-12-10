@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Mini Calculette</title>
+		<script>
+
+		function numbers() {
+
+			// 1.Récupérer les valeurs des champs input
+			var premier = document.getElementById('num_one').value;
+			var second = document.getElementById('num_two').value;
+			var third = document.getElementById('num_three').value;
+			var fourth = document.getElementById('num_four').value;
+
+			// 2.Additionner les nombres
+			var total = parseInt(premier) + parseInt(second) + parseInt(third) + parseInt(fourth) ;
+
+			// 3.Envoyer le résultat dans la dernière case	
+			document.getElementById('result').value = total;
+		}
+		
+		</script>
+	</head>
+	<body>
+		<form>
+			<div><input type="number" id="num_one"></div>
+			<div><input type="number" id="num_two"></div>
+			<div><input type="number" id="num_three"></div>
+			<div><input type="number" id="num_four"></div>
+			<hr>
+			<div><input type="button" id="result" onclick="numbers()" /></div>
+		</form>
+	</body>
+</html>
